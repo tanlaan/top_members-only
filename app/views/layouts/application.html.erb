@@ -11,9 +11,53 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="container is-max-desktop">
 
-    <%= yield %>
+    <% if notice %>
+      <div class="message is-warning">
+        <div class="message-body">
+          <%= notice %>
+        </div>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="danger is-warning">
+        <div class="message-body">
+          <%= alert %>
+        </div>
+      </div>
+    <% end %>
+
+      <nav class="navbar" role='navigation' aria-label="main navigation">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+            <% if user_signed_in?%>
+              <%= link_to 'New Post', new_post_path, class: "button is-primary" %>
+            <% else %>
+              <%= link_to new_user_registration_path, class: "button is-primary" do %>
+                <strong>Sign up</strong>
+              <% end %>
+              <%= link_to 'Log In', new_user_session_path, class: 'button is-light' %>
+            <% end %>
+            </div>
+          </div>
+        <% if user_signed_in? %>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <%= current_user.username %>
+          </a>
+          <div class="navbar-dropdown">
+            <div class="navbar-item">
+              <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        </div>
+      </nav>
+      <%= yield %>
+    </div>
   </body>
 </html>
