@@ -1,24 +1,13 @@
-# README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, you’ll be building an exclusive clubhouse where your members can write anonymous posts. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
 
-Things you may want to cover:
+If you want to add your own stylistic flourishes, consider it extra credit.
 
-* Ruby version
+## Task
 
-* System dependencies
+The projects will be less and less explicit about how to achieve their goals, since we expect you to build on your previous knowledge. If you don’t know how to do something, feel free to check back in previous lessons or projects or Google the correct way to implement it (though be careful, because that may take you deeper down the road than we intended).
 
-* Configuration
+If you’d like to challenge yourself, don’t even follow the steps below, just go ahead and build the app!
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[LINK](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/members-only)
